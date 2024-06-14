@@ -75,13 +75,13 @@ namespace Week15Playground.Data
         {
             int[] httpStatusCodesWorthRetrying =
             {
-            (int)HttpStatusCode.RequestTimeout,
-            (int)HttpStatusCode.BadGateway,
-            (int)HttpStatusCode.ServiceUnavailable,
-            (int)HttpStatusCode.GatewayTimeout,
-            (int)HttpStatusCode.TooManyRequests,
-            (int)HttpStatusCode.BadRequest
-        };
+                (int)HttpStatusCode.RequestTimeout,
+                (int)HttpStatusCode.BadGateway,
+                (int)HttpStatusCode.ServiceUnavailable,
+                (int)HttpStatusCode.GatewayTimeout,
+                (int)HttpStatusCode.TooManyRequests,
+                (int)HttpStatusCode.BadRequest
+            };
 
             return exception.StatusCode.HasValue && httpStatusCodesWorthRetrying.Contains(exception.StatusCode.Value);
         }
